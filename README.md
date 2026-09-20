@@ -1,16 +1,44 @@
-# React + Vite
+# 🚨 Smoke Detection IoT Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+เว็บแอปพลิเคชัน Dashboard สำหรับติดตามและตรวจจับควันแบบ Real-time เชื่อมต่อข้อมูลกับ **Firebase Realtime Database** ออกแบบมาเพื่อให้ผู้ใช้และผู้ดูแลระบบสามารถสังเกตสถานะ ค้นหาประวัติ และวิเคราะห์สถิติความเสี่ยงได้อย่างมีประสิทธิภาพ
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features (ฟีเจอร์หลัก)
 
-## React Compiler
+* **📊 Real-time Monitoring:** แสดงสถานะการตรวจจับควัน ค่าเซ็นเซอร์ และสถานะของอุปกรณ์แบบเรียลไทม์
+* **📈 Stats & Analytics (StatsTab):** 
+  * แสดงข้อมูลสถิติในรูปแบบ **4-Column Grid** ที่อ่านง่ายและสบายตา
+  * มีระบบ **Show More / Show Less** สำหรับเปิด-ปิดการแสดงผลประวัติบันทึกข้อมูล (Logs)
+* **🔍 Date & Building Filtering:** กรองข้อมูลประวัติตามช่วงเวลา วันที่ (รองรับรูปแบบวันที่ไทย) และตามหมายเลขอาคาร/อาคารที่กำหนด
+* **🌙 Dark Mode Support:** รองรับการสลับโหมดมืด (Dark Mode) เพื่อความสบายตาในการใช้งาน
+* **⚡ Continuous Deployment:** เชื่อมต่อ CI/CD กับ Vercel อัปเดตหน้าเว็บให้อัตโนมัติทุกครั้งที่กด Push บน GitHub
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## 🛠️ Tech Stack (เทคโนโลยีที่ใช้)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+* **Frontend:** React + Vite
+* **Styling:** Tailwind CSS / Custom CSS
+* **Database / Backend:** Firebase Realtime Database
+* **Version Control & CI/CD:** Git, GitHub, Vercel
+
+---
+
+## 🚀 Getting Started (ขั้นตอนการติดตั้งและรันโปรเจกต์)
+
+### 1. Clone Repository
+```bash
+git clone [https://github.com/DekiSuNgi/Smoke-Website.git](https://github.com/DekiSuNgi/Smoke-Website.git)
+cd Smoke-Website
+
+Smoke-Website/
+├── src/
+│   ├── assets/          # รูปภาพและไฟล์สื่อต่างๆ
+│   ├── components/      # UI Components (StatsTab, RealtimeStatusTab, SensorCard, etc.)
+│   ├── data/            # Dummy Data / Initial States
+│   ├── firebase.js      # การเชื่อมต่อ Firebase Config
+│   ├── App.jsx          # Component หลักของแอป
+│   └── main.jsx         # Entry Point
+├── public/              # Static Assets
+└── package.json
